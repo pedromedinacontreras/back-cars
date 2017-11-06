@@ -29,10 +29,6 @@ app.get('/', function(req, res){
   res.send('welcome to consume local API');
 });
 
-app.listen(port, function(){
-  console.log('Running on PORTTTT:' + port);
-});
-
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
