@@ -5,9 +5,7 @@ var routes = function(Place) {
 
   placeRouter.route('/')
     .post(function(req, res){
-      console.log(req.body);
       var place = new Place(req.body);
-      console.log(place);
       place.save();
       res.status(201).send(place);
 
